@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-a-vdlnn*=d@wb$1v0(!vkzgw8#^2p&nvqonkr%5tq1!@l_u26u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'katarynka-song-details'
+]
 
 
 # Application definition
