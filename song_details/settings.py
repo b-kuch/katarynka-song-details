@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'details',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -83,7 +84,7 @@ DATABASES = {
             'NAME': 'song-details',
             'ENFORCE_SCHEMA': False,
             'CLIENT': {
-                'host': f'mongodb+srv://{username}:{password}@{atlas_cluster}/{database}?retryWrites=true&w=majority'
+                'host': f'mongodb://{username}:{password}@{atlas_cluster}/?retryWrites=true&w=majority'
             }
         }
 }
