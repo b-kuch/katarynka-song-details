@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-a-vdlnn*=d@wb$1v0(!vkzgw8#^2p&nvqonkr%5tq1!@l_u26u
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'katarynka-song-details'
+    'song-details'
 ]
 
 
@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'song_details.wsgi.application'
 
 username = os.environ['MONGODB_USER']
 password = os.environ['MONGODB_PASSWORD']
-atlas_cluster = 'katarynka-song-details-database'
+atlas_cluster = 'song-details-database'
 database = 'song-details'
 DATABASES = {
     'default': {
