@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-a-vdlnn*=d@wb$1v0(!vkzgw8#^2p&nvqonkr%5tq1!@l_u26u
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'song-details'
+    'song-details',
+    'localhost'
 ]
 
 
@@ -83,7 +84,7 @@ database = 'song-details'
 DATABASES = {
     'default': {
             'ENGINE': 'djongo',
-            'NAME': 'song-details',
+            'NAME': 'song_details',
             'ENFORCE_SCHEMA': False,
             'CLIENT': {
                 'host': f'mongodb://{username}:{password}@{atlas_cluster}/?retryWrites=true&w=majority'
