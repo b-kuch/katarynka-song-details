@@ -77,19 +77,15 @@ WSGI_APPLICATION = 'song_details.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-username = os.environ['MONGODB_USER']
-password = os.environ['MONGODB_PASSWORD']
-atlas_cluster = 'song-details-database'
-database = 'song-details'
 DATABASES = {
     'default': {
-            'ENGINE': 'djongo',
-            'NAME': 'song_details',
-            'ENFORCE_SCHEMA': False,
-            'CLIENT': {
-                'host': f'mongodb://{username}:{password}@{atlas_cluster}/?retryWrites=true&w=majority'
-            }
-        }
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('POSTGRES_NAME'),
+        'USER': os.environ.get('POSTGRES_USER'),
+        'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
+        'HOST': 'db',
+        'PORT': 5432,
+    }
 }
 
 
